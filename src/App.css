@@ -1,38 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:root {
+  --basic-color: #23cc71;
+  --background-color: #f3f3f3;
+}
 .App {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
+  background: var(--background-color);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.container h1 {
+  font-size: 60px;
   text-align: center;
+  color: var(--basic-color);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.deal-container {
+  width: 50%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 600px) {
+  .deal-container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.deal-text-area {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.deal-title {
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.deal-img {
+  border-radius: 5px 0 0 5px;
+}
+.deal-description {
+  font-size: .9em;
+}
+.deal-normal-price {
+  color: gray;
+  text-decoration: line-through;
+  font-size: .9em;
+  padding-right: 10px;
+}
+.deal-sale-price {
+  font-weight: 600;
+}
+.deal-savings {
+  background: #00bf00;
+    border-radius: 9px;
+    height: 50px;
+    padding: .5em 5px;
+    font-weight: 600;
+    color: ghostwhite;
+}
+.list-head {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.footer {
+  font-size: 15px;
+  font-weight: 600;
+}
+.list {
+  display: flex;
+  /* flex-direction: column; */
+  list-style: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
 }
