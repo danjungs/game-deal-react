@@ -1,4 +1,1 @@
-export const storeEnum = {
-  1: 'Steam',
-  25: 'Epic Games'
-}
+export const storeList = '?storeID=1,7,8,13,25'
